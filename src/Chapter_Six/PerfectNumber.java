@@ -1,4 +1,4 @@
-package chapterSix;
+package Chapter_Six;
 
 public class PerfectNumber {
 

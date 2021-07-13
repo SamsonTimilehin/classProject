@@ -1,9 +1,9 @@
-package chapter14;
+package Chapter_Foutheen;
 
 public class CountLetters {
     public static void main(String[] args) {
 
-        countCharacter("hippopotamus",'p');
+
         System.out.println(countCharacter("hippopotamus", 'p'));
     }
     public static int countCharacter(String passStr, char passChar){

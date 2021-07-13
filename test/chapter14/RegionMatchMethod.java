@@ -1,17 +1,18 @@
 package chapter14;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 
 
-import static org.junit.jupiter.api.Assertions.*;
+
 
 public class RegionMatchMethod {
     @Test
     void checkUserInput(){
-    assertTrue(compareInputs("hello","hello"));
-    assertTrue(compareInputs("hello","HELLO"));
-    assertTrue(compareInputs("HELLO","hello"));
+    Assertions.assertTrue(compareInputs("hello","hello"));
+    Assertions.assertTrue(compareInputs("hello","HELLO"));
+    Assertions.assertTrue(compareInputs("HELLO","hello"));
     }
     boolean compareInputs(String input1, String input2){
 

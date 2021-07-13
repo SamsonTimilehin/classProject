@@ -4,7 +4,8 @@ public class Kata {
 
 
     public static double calculateAverage(int number1, int number2, int number3) {
-        double result = (number1 + number2 + number3) / 3.0;
+        double result;
+           result = (number1 + number2 + number3) / 3.0;
         return result;
     }
 
@@ -18,6 +19,7 @@ public class Kata {
         } else {
             return "F";
         }
+
     }
 
     public boolean isEven(int checkEven) {

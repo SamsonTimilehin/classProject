@@ -3,8 +3,8 @@ import java.util.Scanner;
 public class KataMaxMin {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        int minNumber = Integer.MIN_VALUE;
-        int maxNumber = Integer.MAX_VALUE;
+        int minNumber;
+        int maxNumber;
 
 
          maxNumber = 0;

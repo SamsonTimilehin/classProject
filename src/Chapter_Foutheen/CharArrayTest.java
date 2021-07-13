@@ -1,10 +1,11 @@
-package chapter14;
+package Chapter_Foutheen;
 
-import org.junit.jupiter.api.Test;
+
 
 public class CharArrayTest {
-    @Test
-    void reverseString(){
+
+    public static void main(String[] args) {
+
         String initial =  "68573565 234";
 
         StringBuilder reserved = new StringBuilder(initial.substring(initial.length()-3));
@@ -22,4 +23,6 @@ public class CharArrayTest {
         }
         System.out.println(reserved);
     }
+
+
 }

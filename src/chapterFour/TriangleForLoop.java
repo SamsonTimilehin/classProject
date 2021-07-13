@@ -41,10 +41,11 @@ public class TriangleForLoop {
 
         space = 10;
         spaces = " ";
+        String star = "*";
          String asterisks = " ";
         for (int i = 10; i >= 0; i--) {
             System.out.println(asterisks);
-            asterisks += "*";
+            asterisks += star;
 
             for (int j= 1; j < space; j++)
                 System.out.print(spaces);

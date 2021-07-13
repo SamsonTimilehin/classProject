@@ -1,73 +1,94 @@
 package chapterFour;
 
+
 import java.util.Arrays;
-import java.util.Scanner;
 
 public class PlayGround2Test {
 
     public static void main(String[] args) {
-        // String astherics = " ";
-        // for ( int i =0 ; i <= 10 ; i++){
-        //   System.out.println(astherics);
-        //  astherics += "*";
-       // System.out.println("Maximum number is " + PlayGround2.maxClass(45, 43, 78));
-      //  PlayGround2 g = new PlayGround2();
-       // Scanner scan = new Scanner(System.in);
-      //  System.out.println("Enter three numbers");
-       // double num1 = scan.nextDouble();
-       // double num2 = scan.nextDouble();
-        //double num3 = scan.nextDouble();
-        //double result = Math.max (num1,Math.max(num2,num3));
-        //System.out.println("max is " + result);
 
-        //int [] c = new int[12];
-       // System.out.println(c);
-      //  System.out.println(g);
+//        String[] colors = {"MAGENTA", "RED", "WHITE", "BLUE", "CYAN"};
+//
+//        String[] removeColors = {"RED", "WHITE", "BLUE"};
+//
+//        List<String> list = new ArrayList<>();
+//
+//            for(String color : colors){
+//                list.add(color);
+//
+//            }
+//            List<String> removeList = new ArrayList<>();
+//            for(String removeColor : removeColors){
+//                removeList.add(removeColor);
+//            }
+//        removeDuplicate(list,removeList);
+//            for(String color : list){
+//                System.out.println(color);
+//            }
+//        System.out.println();
+//      }
+//      public static void removeDuplicate(Collection<String> collection1, Collection<String> collection2){
+//        Iterator<String> iterator = collection1.iterator();
+//        while(iterator.hasNext()){
+//            if(collection2.contains(iterator.next())){
+//                iterator.remove();
+//            }
+//        }
 
-       // int [] scores = new int[5];
-       // scores[0] = 57;
-      //  scores[1] = 78;
-      //  scores[2] = 45;
-      //  scores[3] = 60;
-      //  scores[4] = 100;
+//        String [] test = {"1,4,6,8", "2,4,8,9"};
+//        for(int i = 0; i < test.length; i++){
+//            System.out.println(test[i]);
+//
+        //  ----------------------------------------------------------------------------------------------------
+//        int [] testArray = {2,3,4,1};
+//        System.out.println(Arrays.toString(displayProductOfArray(testArray)));
+//    }
+//    public static int[] displayProductOfArray(int[] arrayItem){
+//        int[] newArray = new int[arrayItem.length];
+//        int product = 1;
+//        for (int i = 0; i < arrayItem.length; i++) {
+//            product *= arrayItem[i];
+//        }
+//
+//        for (int i = 0; i < arrayItem.length; i++) {
+//            newArray[i] = product / arrayItem[i];
+//        }
+//        return newArray;
+        System.out.println(Arrays.toString(shuffleByNumber(new int[]{8,5,3}, -5)));
 
-      //  for(int counter = 0 ; counter < 5 ; counter ++)
-      //  System.out.println(scores[counter]);
-
-       // System.out.println("Enter array elements");
-       // Scanner input = new Scanner(System.in);
-        //int arrayNumber = input.nextInt();
-
-
-        //int [] arraySize = new int[arrayNumber];
-
-       // System.out.println("Enter one by one");
-        //int sum = 0;
-        //for (int counter = 0 ; counter < arrayNumber; counter++){
-         // arraySize[counter] = input.nextInt();
-          // sum += arraySize[counter];
-
-       // }
-        //System.out.println("Elements of array are " + Arrays.toString(arraySize));
-        //System.out.println("Sum is " + sum);
-    //int [] array = {1,2,3,4,5};
-      //  int sum = 0;
-      //  for(int counter = 0 ; counter < 4 ; counter ++) {
-       //     sum += array[counter];
-       // }
-      //  System.out.println(sum);
-
-        int [] grades = {2,4,2,5,6,3,4};
-        int sum = 0;
+    }
+    public static int[] shuffleByNumber(int[] arrayElements, int number) {
         int counter = 0;
-        for(int gradeName: grades){
-            counter ++;
-            if(counter % 2 == 0) continue;
-            sum+=gradeName;
+        int counter2 = 0;
+        int store;
+        int store2;
+
+    for(int i = 0; i < arrayElements.length; i++){
+        number%= arrayElements.length;
+        counter++;
+        if(counter <= number && counter > 0){
+            for(int j = 0, y = arrayElements.length - 1; j < arrayElements.length; j++) {
+                store = arrayElements[j];
+                arrayElements[j] = arrayElements[y];
+                arrayElements[y] = store;
+            }
         }
-        System.out.println(sum);
     }
+    for(int k = 0; k < arrayElements.length; k++){
+        number%= arrayElements.length;
+        counter2--;
+        if(counter2 >= number){
+            for(int j = 0, y = j + 1; j < arrayElements.length-1; j++, y++) {
+                store2 = arrayElements[j];
+                arrayElements[j] = arrayElements[y];
+                arrayElements[y] = store2;
+            }
+            }
+
+    }
+        return arrayElements;
+    }
+}
 
 
-    }
 

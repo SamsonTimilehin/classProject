@@ -1,4 +1,4 @@
-package chapterFive;
+package Chapter_Five;
 
 
 
@@ -11,7 +11,7 @@ public class CalculatePi {
 
     public void calculatePiSeries(){
         double pii = 4;
-        for(int d =1; d<= 200; d++){
+        for(int d =1; d<= 2000; d++){
             if(pii == 3.14159){
                 break;
             }
