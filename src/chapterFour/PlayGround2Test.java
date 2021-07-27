@@ -1,92 +1,65 @@
 package chapterFour;
 
-
+import java.io.OutputStream;
 import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class PlayGround2Test {
 
     public static void main(String[] args) {
-
-//        String[] colors = {"MAGENTA", "RED", "WHITE", "BLUE", "CYAN"};
+//    String [] testArray = {"the3","read1","goes5","you2","and4"};
+//        System.out.println(Arrays.toString(displaySortedString(testArray)));
 //
-//        String[] removeColors = {"RED", "WHITE", "BLUE"};
-//
-//        List<String> list = new ArrayList<>();
-//
-//            for(String color : colors){
-//                list.add(color);
-//
-//            }
-//            List<String> removeList = new ArrayList<>();
-//            for(String removeColor : removeColors){
-//                removeList.add(removeColor);
-//            }
-//        removeDuplicate(list,removeList);
-//            for(String color : list){
-//                System.out.println(color);
-//            }
-//        System.out.println();
-//      }
-//      public static void removeDuplicate(Collection<String> collection1, Collection<String> collection2){
-//        Iterator<String> iterator = collection1.iterator();
-//        while(iterator.hasNext()){
-//            if(collection2.contains(iterator.next())){
-//                iterator.remove();
-//            }
-//        }
-
-//        String [] test = {"1,4,6,8", "2,4,8,9"};
-//        for(int i = 0; i < test.length; i++){
-//            System.out.println(test[i]);
-//
-        //  ----------------------------------------------------------------------------------------------------
-//        int [] testArray = {2,3,4,1};
-//        System.out.println(Arrays.toString(displayProductOfArray(testArray)));
 //    }
-//    public static int[] displayProductOfArray(int[] arrayItem){
-//        int[] newArray = new int[arrayItem.length];
-//        int product = 1;
-//        for (int i = 0; i < arrayItem.length; i++) {
-//            product *= arrayItem[i];
-//        }
+//    public static String[] displaySortedString(String[] stringArray){
+//        int store1 = 0;
+//        int store2 = 0;
 //
-//        for (int i = 0; i < arrayItem.length; i++) {
-//            newArray[i] = product / arrayItem[i];
+//        for(int i = 0; i < stringArray.length; i++){
+//            String stringElement1 = stringArray[i];
+//            for(int j = 0; j < stringElement1.length(); j++){
+//               if(Character.isDigit(stringElement1.charAt(j))){
+//                   store1 = Integer.parseInt(stringElement1.charAt(j) + "");
+//               }
+//            }
+//
+//            for(int k = i + 1; k < stringArray.length; k++){
+//                String stringElement2 = stringArray[k];
+//                for(int m = 0; m < stringElement2.length(); m++){
+//                    if(Character.isDigit(stringElement2.charAt(m))){
+//                        store2 = Integer.parseInt(stringElement2.charAt(m) + "");
+//                    }
+//                }
+//                if(store1 > store2){
+//                    String temp = stringArray[i];
+//                    stringArray[i] = stringArray[k];
+//                    stringArray[k] = temp;
+//                }
+//            }
 //        }
-//        return newArray;
-        System.out.println(Arrays.toString(shuffleByNumber(new int[]{8,5,3}, -5)));
+//        return stringArray;
 
-    }
-    public static int[] shuffleByNumber(int[] arrayElements, int number) {
-        int counter = 0;
-        int counter2 = 0;
-        int store;
-        int store2;
 
-    for(int i = 0; i < arrayElements.length; i++){
-        number%= arrayElements.length;
-        counter++;
-        if(counter <= number && counter > 0){
-            for(int j = 0, y = arrayElements.length - 1; j < arrayElements.length; j++) {
-                store = arrayElements[j];
-                arrayElements[j] = arrayElements[y];
-                arrayElements[y] = store;
-            }
-        }
-    }
-    for(int k = 0; k < arrayElements.length; k++){
-        number%= arrayElements.length;
-        counter2--;
-        if(counter2 >= number){
-            for(int j = 0, y = j + 1; j < arrayElements.length-1; j++, y++) {
-                store2 = arrayElements[j];
-                arrayElements[j] = arrayElements[y];
-                arrayElements[y] = store2;
-            }
-            }
+//String john = "2316789";
+//for(int k = 0; k < john.length(); k++){
+//    if(john.charAt(k) == 3){
+//        System.out.println(Character.valueOf(john.charAt(k)));
+//    }
+//}
 
-    }
-        return arrayElements;
+       int [][] test = new int[4][3];
+       for(int[] i : test){
+           for(int k : i){
+               k = 1;
+               System.out.print("# ");
+           }
+           System.out.println();
+       }
+
     }
 }
 
