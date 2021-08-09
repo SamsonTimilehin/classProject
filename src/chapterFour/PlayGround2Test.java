@@ -1,12 +1,21 @@
 package chapterFour;
 
+import org.w3c.dom.ls.LSOutput;
+
 import java.io.OutputStream;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
+import java.util.function.IntPredicate;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
+
+import static java.util.Arrays.asList;
 
 public class PlayGround2Test {
 
@@ -51,17 +60,18 @@ public class PlayGround2Test {
 //    }
 //}
 
-       int [][] test = new int[4][3];
-       for(int[] i : test){
-           for(int k : i){
-               k = 1;
-               System.out.print("# ");
-           }
-           System.out.println();
-       }
+//        int [] test = {3,5,2,4,1};
+//        IntPredicate even = value -> value % 2 == 0;
+//        IntPredicate greater = val -> val > 1;
+//        IntStream.of(test).filter(even.negate()).forEach(System.out::println);
+
+//        BigInteger store = BigInteger.valueOf(5400);
+//        BigInteger red = BigInteger.valueOf(500000000);
+//        System.out.println(store.multiply(red));
+
+      int [] value = {1,2,3,6,7,9};
+
+        System.out.println(IntStream.of(value).reduce(2, (x,y) -> x * y));
 
     }
 }
-
-
-
