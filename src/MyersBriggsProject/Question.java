@@ -5,6 +5,7 @@ import java.util.Objects;
 public class Question {
    private String optionA;
     private String optionB;
+    private String[] responses;
 
     public Question(String optionA, String optionB) {
         this.optionA = optionA;
@@ -27,9 +28,17 @@ public class Question {
         this.optionB = optionB;
     }
 
+    public String[] getResponses() {
+        return responses;
+    }
+
+    public void setResponses(String... responses) {
+        this.responses = responses;
+    }
+
     @Override
     public String toString() {
-        return String.format("%s\t%s%n",optionA,optionB);
+        return String.format("%s\t%s%n%s%n",optionA,optionB,responses);
 
     }
 

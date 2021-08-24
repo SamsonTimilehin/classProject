@@ -1,31 +1,20 @@
 package Chapter_Eight;
 
-import java.util.Timer;
-import java.util.TimerTask;
 
 public enum TrafficLight {
 
-    RED (schedule(5000)),
-    GREEN(schedule(5000)),
-    YELLOW(schedule(5000));
+    RED ("5m"),
+    GREEN("5m"),
+    YELLOW("5m");
 
-    private static Timer schedule(int time) {
-        return RED.duration;
-    }
 
-    private final Timer duration;
+    private final String duration;
 
-   TrafficLight(Timer duration){
+     TrafficLight(String duration){
         this.duration = duration;
     }
 
-    public static class TrafficDuration extends TimerTask {
-
-        @Override
-        public void run() {
-            System.out.println(TrafficLight.RED);
-//            System.out.println(TrafficLight.GREEN);
-//            System.out.println(TrafficLight.YELLOW);
-        }
+    public String getDuration(){
+         return duration;
     }
 }

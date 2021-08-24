@@ -1,14 +1,10 @@
 package chapterFour;
-
-import org.w3c.dom.ls.LSOutput;
-
-import java.io.OutputStream;
+import javax.swing.text.NumberFormatter;
 import java.math.BigDecimal;
 import java.math.BigInteger;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
+import java.text.NumberFormat;
+import java.time.*;
+import java.util.*;
 import java.util.function.IntPredicate;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
@@ -20,37 +16,6 @@ import static java.util.Arrays.asList;
 public class PlayGround2Test {
 
     public static void main(String[] args) {
-//    String [] testArray = {"the3","read1","goes5","you2","and4"};
-//        System.out.println(Arrays.toString(displaySortedString(testArray)));
-//
-//    }
-//    public static String[] displaySortedString(String[] stringArray){
-//        int store1 = 0;
-//        int store2 = 0;
-//
-//        for(int i = 0; i < stringArray.length; i++){
-//            String stringElement1 = stringArray[i];
-//            for(int j = 0; j < stringElement1.length(); j++){
-//               if(Character.isDigit(stringElement1.charAt(j))){
-//                   store1 = Integer.parseInt(stringElement1.charAt(j) + "");
-//               }
-//            }
-//
-//            for(int k = i + 1; k < stringArray.length; k++){
-//                String stringElement2 = stringArray[k];
-//                for(int m = 0; m < stringElement2.length(); m++){
-//                    if(Character.isDigit(stringElement2.charAt(m))){
-//                        store2 = Integer.parseInt(stringElement2.charAt(m) + "");
-//                    }
-//                }
-//                if(store1 > store2){
-//                    String temp = stringArray[i];
-//                    stringArray[i] = stringArray[k];
-//                    stringArray[k] = temp;
-//                }
-//            }
-//        }
-//        return stringArray;
 
 
 //String john = "2316789";
@@ -69,9 +34,45 @@ public class PlayGround2Test {
 //        BigInteger red = BigInteger.valueOf(500000000);
 //        System.out.println(store.multiply(red));
 
-      int [] value = {1,2,3,6,7,9};
+        // int [] value = {1,2,3,6,7,9};
 
-        System.out.println(IntStream.of(value).reduce(2, (x,y) -> x * y));
+        //System.out.println(IntStream.of(value).reduce(2, (x,y) -> x * y));
+
+       // Date newDate = new Date();
+      //boolean isCorrect =  newDate.after();
+//        LocalDateTime period = LocalDateTime.now();
+//        LocalDateTime period1 = LocalDateTime.of(2021,3,12,2,54);
+//
+//        if(period.getMonth().compareTo(Month.from(period1)) > 0){
+//            System.out.println(period.getDayOfMonth());
+//        }
+
+//        System.out.println(displayDayOfTheACalendar(2021,8,20));
+//
+//    }
+//    public static String displayDayOfTheACalendar(int year, int month, int day){
+//
+//        String[] days_of_the_week = {"SUNDAY","MONDAY","TUESDAY","WEDNESDAY","THURSDAY","FRIDAY","SATURDAY"};
+//
+//        Calendar cal = Calendar.getInstance();
+//
+//        cal.set(year, month-1, day);
+//
+//        int p = cal.get(Calendar.DAY_OF_WEEK);
+//
+//        return days_of_the_week[p -1];
+//
+//        LocalDateTime setD = LocalDateTime.of(2021,8,22,5,31);
+//        LocalDateTime  test = LocalDateTime.now();
+//        if(setD.getMonthValue() == test.getMonthValue()){
+//            System.out.println("This month is her birth month");
+//        }else System.out.println("This month is not her birth month");
+
+//        Scanner scan = new Scanner(System.in);
+//        double currencyValue = scan.nextDouble();
+//        String nigeria = NumberFormat.getCurrencyInstance(Locale.forLanguageTag("HA-LATN-NG")).format(currencyValue);
+//        System.out.println(nigeria);
+
 
     }
 }

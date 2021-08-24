@@ -43,7 +43,7 @@ public class MyersBriggsTest {
     void testThatEveryGroupOfQuestionWillReturnAnExpectedScale() {
         Questionnaire questionnaire = new Questionnaire();
         questionnaire.selectGroupOfQuestions(3);
-        questionnaire.selectOptions(new char[]{'B', 'B', 'A', 'B', 'B'});
+        questionnaire.selectOptions('B', 'B', 'A', 'B', 'B');
 
         List<PersonalityType> expectedEnumValue = List.of(PersonalityType.F);
 
@@ -54,27 +54,40 @@ public class MyersBriggsTest {
     void testThatTheArrayMustNotContainMoreThanFiveElement() {
         Questionnaire questionnaire = new Questionnaire();
 
-        assertThrows(IllegalArgumentException.class, () -> questionnaire.selectOptions(new char[]{'A', 'B', 'A', 'B', 'B', 'B'}));
+        assertThrows(IllegalArgumentException.class, () -> questionnaire.selectOptions('A', 'B', 'A', 'B', 'B', 'B'));
     }
 
     @Test
-    void testThatTheProgramWillReturnFourDifferentExpectedScale() {
+    void testThatTheProgramWillReturnFourDifferentExpectedAnalysis() {
         Questionnaire questionnaire = new Questionnaire();
 
         questionnaire.selectGroupOfQuestions(1);
-        questionnaire.selectOptions(new char[]{'A', 'B', 'A', 'B', 'B'});
+        questionnaire.selectOptions('A', 'B', 'A', 'B', 'B');
 
         questionnaire.selectGroupOfQuestions(2);
-        questionnaire.selectOptions(new char[]{'B', 'B', 'A', 'B', 'B'});
+        questionnaire.selectOptions('B', 'B', 'A', 'B', 'B');
 
         questionnaire.selectGroupOfQuestions(3);
-        questionnaire.selectOptions(new char[]{'B', 'B', 'A', 'B', 'B'});
+        questionnaire.selectOptions('B', 'B', 'A', 'B', 'B');
 
         questionnaire.selectGroupOfQuestions(4);
-        questionnaire.selectOptions(new char[]{'B', 'B', 'A', 'B', 'B'});
+        questionnaire.selectOptions('B', 'B', 'A', 'B', 'B');
 
-        List<PersonalityType> expectedEnumValue = List.of(I,N,F,P);
+        List<PersonalityType> expectedEnumValue = List.of(I, N, F, P);
 
         assertEquals(expectedEnumValue, questionnaire.getEnumValue());
+    }
+
+    @Test
+    void testThatTheArrayCanOnlyTakeAAndB() {
+        Questionnaire questionnaire = new Questionnaire();
+        questionnaire.selectGroupOfQuestions(1);
+
+        questionnaire.selectQuestionNumber(2);
+        Question expectedValue =
+
+                new Question("A.More outgoing,think out loud", "B.More reserve,think to yourself");
+        assertEquals(expectedValue, questionnaire.getStoreQuestion());
+        //assertThrows(IllegalArgumentException.class, () -> questionnaire.selectOptions('A', 'C', 'A', 'B', 'B'));
     }
 }

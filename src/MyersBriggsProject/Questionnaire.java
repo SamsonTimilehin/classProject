@@ -3,7 +3,6 @@ package MyersBriggsProject;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Objects;
 
 public class Questionnaire {
 
@@ -11,11 +10,13 @@ public class Questionnaire {
     private final List<Question> reArrangedQuestions;
     private final List<PersonalityType> enumValue;
     private int chosenGroupOfQuestions;
+    private Question storeQuestion;
 
 
     public Questionnaire() {
         this.reArrangedQuestions = new ArrayList<>();
         this.enumValue = new ArrayList<>();
+
 
      this.question = List.of(
                 new Question("A.Expend energy, enjoy group", "B.Conserve energy, enjoy one-on-one"),
@@ -53,16 +54,25 @@ public class Questionnaire {
         }
         for(int i = chosenGroupOfQuestions - 1; i < question.size(); i+=4){
             reArrangedQuestions.add(question.get(i));
+            System.out.println(question.get(i));
+
         }
-        System.out.println(reArrangedQuestions);
+
         this.chosenGroupOfQuestions = chosenGroupOfQuestions;
     }
 
     public List<Question> getSelectedGroupOfQuestion(){
         return reArrangedQuestions;
     }
+    public void selectQuestionNumber(int questionNumber){
+             storeQuestion = reArrangedQuestions.get(questionNumber-1);
+        System.out.println(storeQuestion);
 
-    public void selectOptions(char [] selectedOption){
+    }
+    public Question getStoreQuestion(){
+        return storeQuestion;
+    }
+    public void selectOptions(char...selectedOption){
             int optionACounter = 0;
             int optionBCounter = 0;
         for(int i = 0; i < selectedOption.length; i++){
