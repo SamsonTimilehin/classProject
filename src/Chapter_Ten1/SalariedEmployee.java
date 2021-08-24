@@ -33,7 +33,7 @@ public class SalariedEmployee extends Employee {
 
     @Override
     public int setBirthMonth(Date birthDate) {
-        birthDate.setMonth(8);
+        birthDate.setMonth(11);
         setBirthDate(birthDate);
         return birthDate.getMonth();
     }

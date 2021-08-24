@@ -73,6 +73,7 @@ public class PlayGround2Test {
 //        String nigeria = NumberFormat.getCurrencyInstance(Locale.forLanguageTag("HA-LATN-NG")).format(currencyValue);
 //        System.out.println(nigeria);
 
-
+      int good = Math.min(12,5);
+        System.out.println(good);
     }
 }
