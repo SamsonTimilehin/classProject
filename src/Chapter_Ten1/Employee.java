@@ -13,7 +13,7 @@ public abstract class Employee {
         this.firstName = firstName;
         this.lastName = lastName;
         this.securityNumber = securityNumber;
-        //this.birthDate = new Date(birthDate.getMonth(), birthDate.getDay(), birthDate.getYear());
+
 
     }
 
@@ -31,7 +31,7 @@ public abstract class Employee {
 
     public void setBirthDate(Date birthDate) {
 
-        this.birthDate = new Date(birthDate.getMonth(), birthDate.getDay(), birthDate.getYear());
+        this.birthDate = birthDate;
     }
 
     public Date getBirthDate() {
@@ -41,7 +41,7 @@ public abstract class Employee {
 
     @Override
     public String toString() {
-        return String.format("%s %s%nSecurity Number: %s%nDate of birth: %s%n",firstName,lastName, securityNumber, birthDate);
+        return String.format("%s %s%nSecurity Number: %s%nDate of birth: %s%n",firstName,lastName, securityNumber,birthDate);
 
     }
     public abstract double earnings();

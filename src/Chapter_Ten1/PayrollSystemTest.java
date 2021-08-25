@@ -29,8 +29,8 @@ public class PayrollSystemTest {
         int basePlusCommEmployeeBirthMonth = basePlusCommissionEmployee.setBirthMonth(new Date(7,29,2011));
         LocalDateTime presentDate = LocalDateTime.now();
         System.out.println(presentDate);
-        Employee[] employees = new Employee[4];
 
+        Employee[] employees = new Employee[4];
         employees[0] = salariedEmployee;
         employees[1] = hourlyEmployee;
         employees[2] = commissionEmployee;
@@ -38,19 +38,21 @@ public class PayrollSystemTest {
 
         for(Employee currentEmployee : employees){
             System.out.println(currentEmployee);
-            System.out.println(currentEmployee.earnings());
-
+            //System.out.println(currentEmployee.earnings());
 
             if(salBirthMonth == presentDate.getMonthValue()){
-                double salEmployeeBonusWithEmployeesPay = salariedEmployee.earnings() + 100;
-                System.out.println(salEmployeeBonusWithEmployeesPay);
+                System.out.println(salariedEmployee.earnings() + 100);
+                //System.out.println(salEmployeeBonusWithEmployeesPay);
+
             }else if(hourlyEmployeeBirthMonth == presentDate.getMonthValue()){
-                double hourlyEmployeeBonusWithEmployeesPay = hourlyEmployee.earnings() + 100;
-                System.out.println(hourlyEmployeeBonusWithEmployeesPay);
+                System.out.println(hourlyEmployee.earnings() + 100);
+
+               // System.out.println(hourlyEmployeeBonusWithEmployeesPay);
             }else if(commEmployeeBirthMonth == presentDate.getMonthValue()){
-                double commEmployeeBonusWithPay = commissionEmployee.earnings() + 100;
-                System.out.println(commEmployeeBonusWithPay);
+                System.out.println(commissionEmployee.earnings() + 100);
+                //System.out.println(commEmployeeBonusWithPay);
             }
+            //System.out.println(currentEmployee.earnings() + 100);
         }
     }
 }

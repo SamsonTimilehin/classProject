@@ -73,7 +73,29 @@ public class PlayGround2Test {
 //        String nigeria = NumberFormat.getCurrencyInstance(Locale.forLanguageTag("HA-LATN-NG")).format(currencyValue);
 //        System.out.println(nigeria);
 
-      int good = Math.min(12,5);
-        System.out.println(good);
+//      int good = Math.min(12,5);
+//        System.out.println(good);
+
+        Scanner scan = new Scanner(System.in);
+
+
+        PlayGround2 newResponses = new PlayGround2("hen", "raw");
+        String scanStringInput;
+        List<PlayGround2> testList = List.of(
+                new PlayGround2("nice","great")
+               // new PlayGround2("peter","john")
+        );
+        for(PlayGround2 fetchElement : testList){
+            System.out.println(fetchElement);
+            //System.out.println("Enter users responses");
+            //System.out.println(PlayGround2.getResponses());
+            scanStringInput = scan.nextLine();
+            newResponses.setResponses(scanStringInput);
+
+        }
+        System.out.println(newResponses.getResponses());
+        System.out.println(newResponses.getCountResponses());
+
+
     }
 }

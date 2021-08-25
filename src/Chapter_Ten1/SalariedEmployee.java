@@ -40,6 +40,6 @@ public class SalariedEmployee extends Employee {
 
     @Override
     public String toString() {
-        return String.format("%s%s",super.toString(),getWeeklySalary());
+        return String.format("%sEarnings: %s",super.toString(),getWeeklySalary());
     }
 }

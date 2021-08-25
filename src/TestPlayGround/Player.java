@@ -27,9 +27,9 @@ public class Player {
 
     public void didPlayerWin(String winningFlip){
         if(coinOption == winningFlip){
-            System.out.println(name + "won with a flip of" + coinOption);
+            System.out.println(name + " won with a flip of " + coinOption);
         }else{
-            System.out.println(name + "lost with a flip of" + coinOption);
+            System.out.println(name + " lost with a flip of " + coinOption);
         }
 
     }
