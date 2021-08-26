@@ -3,6 +3,8 @@ package Chapter_Ten1;
 
 import Chapter_Ten1.Date;
 
+import java.time.LocalDateTime;
+
 public abstract class Employee {
     private final String firstName;
     private final String lastName;
@@ -46,5 +48,5 @@ public abstract class Employee {
     }
     public abstract double earnings();
 
-    public abstract int setBirthMonth(Date birthDate);
+
 }

@@ -26,6 +26,13 @@ public class BasePlusCommissionEmployee extends CommissionEmployee {
     public double earnings(){
         return getBaseSalary() + super.earnings();
     }
+
+//    @Override
+//    public void setBirthMonth(Date birthday){
+//        setBirthDate(birthday);
+//
+//    }
+
     public String toString(){
         return String.format("%s ",super.toString());
     }

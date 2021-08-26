@@ -38,13 +38,6 @@ public class CommissionEmployee extends Employee {
         return getCommissionRate() * getGrossSales();
     }
 
-    @Override
-    public int setBirthMonth(Date birthDate) {
-        birthDate.setMonth(5);
-        setBirthDate(birthDate);
-        return birthDate.getMonth();
-    }
-
     public String toString(){
         return String.format("%sEarnings: %f", super.toString(),earnings());
    }

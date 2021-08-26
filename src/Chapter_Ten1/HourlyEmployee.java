@@ -38,13 +38,6 @@ public class HourlyEmployee extends Employee {
     }
 
     @Override
-    public int setBirthMonth(Date birthDate) {
-        birthDate.setMonth(8);
-        setBirthDate(birthDate);
-        return birthDate.getMonth();
-    }
-
-    @Override
     public String toString() {
         return String.format("%sEarnings: %f",super.toString(),earnings());
     }

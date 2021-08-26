@@ -32,13 +32,6 @@ public class SalariedEmployee extends Employee {
     }
 
     @Override
-    public int setBirthMonth(Date birthDate) {
-        birthDate.setMonth(11);
-        setBirthDate(birthDate);
-        return birthDate.getMonth();
-    }
-
-    @Override
     public String toString() {
         return String.format("%sEarnings: %s",super.toString(),getWeeklySalary());
     }
