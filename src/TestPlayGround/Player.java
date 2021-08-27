@@ -2,10 +2,10 @@ package TestPlayGround;
 
 public class Player {
 
-    private String name;
+    private final String name;
     private String coinOption = "";
 
-    public String [] coinValue = {"Head","Tail"};
+    private final String [] coinValue = {"Head","Tail"};
 
     Player(String newName){
         name = newName;

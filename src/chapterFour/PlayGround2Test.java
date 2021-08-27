@@ -77,5 +77,9 @@ public class PlayGround2Test {
 //        System.out.println(good);
 
 
+        Map<String, Integer> mapNumber = new HashMap<>();
+        mapNumber.put("human", 4);
+        mapNumber.put("John", 8);
+        System.out.println(mapNumber);
     }
 }
