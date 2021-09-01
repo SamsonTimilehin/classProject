@@ -1,4 +1,4 @@
-package PlayGroundPackage;
+package GoodInheritancePractice;
 
 public class AnimalDriverClass {
 

@@ -1,6 +1,8 @@
-package PlayGroundPackage;
+package GoodInheritancePractice;
 
-public class Lion extends Animal{
+import GoodInheritancePractice.Animal;
+
+public class Lion extends Animal {
 
     private final String name;
 

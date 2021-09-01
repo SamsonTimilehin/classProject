@@ -1,4 +1,4 @@
-package TestPlayGround;
+package CoinGame;
 
 public class Player {
 

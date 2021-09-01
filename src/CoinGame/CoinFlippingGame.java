@@ -1,4 +1,4 @@
-package TestPlayGround;
+package CoinGame;
 
 import java.util.Scanner;
 

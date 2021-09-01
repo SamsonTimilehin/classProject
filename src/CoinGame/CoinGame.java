@@ -1,8 +1,8 @@
-package TestPlayGround;
+package CoinGame;
 
 public class CoinGame {
 
-    Player [] players = new Player[2];
+    Player[] players = new Player[2];
     Coin theCoin = new Coin();
 
     public CoinGame(String player1Name,String player2Name){

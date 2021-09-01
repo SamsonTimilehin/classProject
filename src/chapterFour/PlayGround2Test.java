@@ -77,9 +77,23 @@ public class PlayGround2Test {
 //        System.out.println(good);
 
 
-        Map<String, Integer> mapNumber = new HashMap<>();
-        mapNumber.put("human", 4);
-        mapNumber.put("John", 8);
-        System.out.println(mapNumber);
+//        Map<String, Integer> mapNumber = new HashMap<>();
+//        mapNumber.put("human", 4);
+//        mapNumber.put("John", 8);
+//        System.out.println(mapNumber);
+//
+//        Map<Long, String> mapLong = new HashMap<>();
+//        mapLong.put(10231L,"Lion");
+//        System.out.println(mapLong.get(10231L));
+//        System.out.println(mapLong.isEmpty());
+
+        PlayGround2 checkOut = new PlayGround2();
+        List<String> mainList = new ArrayList<>();
+        mainList.add("testing");
+
+        checkOut.setNewList(mainList);
+
+        System.out.println(checkOut.getNewList());
+
     }
 }

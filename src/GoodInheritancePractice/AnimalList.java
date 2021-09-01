@@ -1,4 +1,6 @@
-package PlayGroundPackage;
+package GoodInheritancePractice;
+
+import GoodInheritancePractice.Animal;
 
 import java.util.ArrayList;
 import java.util.List;

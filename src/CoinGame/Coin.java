@@ -1,4 +1,4 @@
-package TestPlayGround;
+package CoinGame;
 
 public class Coin {
     private String coinOption = "";
