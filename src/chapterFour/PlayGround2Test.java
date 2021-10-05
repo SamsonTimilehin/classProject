@@ -1,5 +1,6 @@
 package chapterFour;
 import javax.swing.text.NumberFormatter;
+import javax.swing.text.html.Option;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.text.NumberFormat;
@@ -87,13 +88,17 @@ public class PlayGround2Test {
 //        System.out.println(mapLong.get(10231L));
 //        System.out.println(mapLong.isEmpty());
 
-        PlayGround2 checkOut = new PlayGround2();
-        List<String> mainList = new ArrayList<>();
-        mainList.add("testing");
+//        PlayGround2 checkOut = new PlayGround2();
+//        List<String> mainList = new ArrayList<>();
+//        mainList.add("testing");
+//
+//        checkOut.setNewList(mainList);
+//
+//        System.out.println(checkOut.getNewList());
 
-        checkOut.setNewList(mainList);
-
-        System.out.println(checkOut.getNewList());
-
+        String s = "java";
+        s = "Html";
+        System.out.println(s);
     }
+
 }

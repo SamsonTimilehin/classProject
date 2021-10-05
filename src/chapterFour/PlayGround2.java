@@ -1,17 +1,21 @@
 package chapterFour;
 
-import java.util.ArrayList;
-import java.util.List;
+
 
 public class PlayGround2 {
 
- private List<String> newList = new ArrayList<>();
+    public static void main(String[] args) {
+        String temp = " ";
+        String item = "123";
+        for(int i =0; i < item.length(); i++){
+            temp = item.charAt(i) + " ";
 
-    public List<String> getNewList() {
-        return newList;
+            System.out.println(temp);
+        }
+        System.out.print(temp);
     }
-
-    public void setNewList(List<String> newList) {
-        this.newList = newList;
-    }
+//    public static String[] displaySumOfStringArray(String[]item){
+//
+//        
+//    }
 }
