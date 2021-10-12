@@ -1,4 +1,4 @@
-package algorithmAndDataStructure;
+package dataStructureAndAlgorithm;
 
 public class UniqueChar {
 

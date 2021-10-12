@@ -96,9 +96,6 @@ public class PlayGround2Test {
 //
 //        System.out.println(checkOut.getNewList());
 
-        String s = "java";
-        s = "Html";
-        System.out.println(s);
-    }
 
+    }
 }
